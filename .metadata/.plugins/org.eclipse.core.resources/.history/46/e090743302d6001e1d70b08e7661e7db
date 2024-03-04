@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.apachekafka.producer.serviceimpl;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 28-Feb-2024 10:22:13 am
+*
+**/
+public class KafkaJsonMessageProducerImpl {
+
+}

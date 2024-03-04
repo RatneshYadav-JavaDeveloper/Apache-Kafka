@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package com.kafkaproducer.service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.kafkaproducer.service.MessageDrivenService;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 29-Feb-2024 3:32:10 pm
+*
+**/
+@Service
+public class MessageDrivenService  {
+
+	public static final Logger LOGGER = LoggerFactory.getLogger(MessageDrivenService.class);
+	
+	
+	@Autowired KafkaTemplate<String, String> kafkaTemplate;
+	
+	
+
+}

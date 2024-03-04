@@ -1,0 +1,33 @@
+package com.apachekafka.producer.serviceimpl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
+
+import com.apachekafka.producer.service.MessageProducerService;
+
+@Service
+public class MessageProducerServiceImpl implements MessageProducerService {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(MessageProducerServiceImpl.class);
+	
+	@Autowired
+	private KafkaTemplate< String, String> kafkaTemplate;
+	
+	String[] locArr = {"Dubai","Abu Dhabi","Sharjah","Al ‘Ayn","‘Ajmān","Ra’s al Khaymah","Al Fujayrah","Umm al Qaywayn","Khawr Fakkān","Kalbā","Madīnat Zāyid","Al Jazīrah al Ḩamrā’","Zubārah","Naḩwah","Sharīyah","Ḩaşat al Bidīyah","Maşfūţ","Qarayţaysah","Margham","Qimah","‘Ūd al Bayḑā’","Ferij al Muhadham","Hunaywah","Şufayrī","Al Faq‘","‘Urqūb Juwayza","Ḩayl","Ḩattā","Al Lusaylī","Warīsān","Muḑayfī","Rafā‘","Lūlayyah","Wādī Shī","Ash Shu‘ayb","Ḩiyāwah","Ar Rufayşah","Shīs","Al Jazīrah","Al Ḩamrīyah","Adh Dhayd","Al ‘Awdah","Qidfa‘","Ţayyibah","Biţnah","Mu‘tariḑah","Theeb","Wa‘bayn","Al Qurayyah","Al Manāmah","‘Abādilah","Al Ḩalāh","Ghurfah","Ḩayl","Ghayl","Sā’if","Badīyah","Far‘ah","Mukhtaraqah","Yalah","Rughaylāt","Ḩafarah","Ḩārat Zuţūţ","Khawr Kalbā","Al ‘Uyaynah","Rūl Ḑadnā","‘Uqayr","Tawian","Shawīyah","Ḩarrah","Dibā","Sinnah","Dūb","Sram","‘Asamah","Al ‘Ayn al Ghumūr","Şūr","Waḩlah","Thoban","Al Gissemari","Murbaḩ","Ḩayāt","Khulaybīyah","Z̧anḩah","Saqamqam","Ḑāhir","Jareef","Girath","Riyāmah","Al Kubūs","‘Ashashah","Ḑadnā","‘Aqqah","Ras Dibba","Nuhayy","Ḑab‘ah","Murbaḑ","Şafad","Ţarīqat Ja‘d","Mawrid" };
+	
+	/**
+	 * @implNote : method to send the message to the topic subscribed consumer.
+	 * @param message
+	 * **/
+	@Override
+	public void sendMessage(String message) {
+		// TODO Auto-generated method stub
+		LOGGER.info(String.format("Message Sent %s", message));
+		kafkaTemplate.send("newTopic", message);
+		
+	}
+
+}

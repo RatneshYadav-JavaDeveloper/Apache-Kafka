@@ -1,0 +1,62 @@
+/**
+ * 
+ */
+package com.kafkaproducer.controller;
+
+import java.net.URI;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kafkaproducer.service.MessageDrivenService;
+import com.launchdarkly.eventsource.EventHandler;
+import com.launchdarkly.eventsource.EventSource;
+import com.launchdarkly.eventsource.MessageEvent;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 29-Feb-2024 4:29:50 pm
+*
+**/
+@RestController
+@RequestMapping("/v1")
+public class KafkaProducerController {
+
+	@Autowired MessageDrivenService messageDrivenService;
+	@Autowired KafkaTemplate<String, String> kafkaTemplate;
+    String Topic;
+	
+	
+	
+	/**
+	 * @param kafkaTemplate
+	 * @param topic
+	 */
+	public KafkaProducerController(KafkaTemplate<String, String> kafkaTemplate, String topic) {
+		this.kafkaTemplate = kafkaTemplate;
+		Topic = topic;
+	}
+
+
+
+	/**
+	 * @implNote: controller to produce the message.
+	 * @param: message
+	 * {@link: http://localhost:8081/v1/produce?message=firstMessage}
+	 * **/
+	//@GetMapping("/produce")
+	public ResponseEntity<Void> produceMessageController(@RequestParam("message") String message){
+		
+		EventHandler eventHandler = new EventSource.
+		EventSource.Builder builder = new EventSource.Builder(eventHandler, URI.create("https:stream.wikimedia.org/v2/stream/recentchange"));
+		EventSource eventSource = builder.build();
+		eventSource.start();
+		return null;
+	}
+}

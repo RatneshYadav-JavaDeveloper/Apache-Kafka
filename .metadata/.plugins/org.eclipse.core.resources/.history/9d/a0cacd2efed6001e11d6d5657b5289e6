@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package com.kafkaproducer.serviceimpl;
+
+import com.kafkaproducer.service.MessageDrivenService;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 29-Feb-2024 3:32:10 pm
+*
+**/
+public class MessageDrivenServiceImpl implements MessageDrivenService {
+
+}

@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.kafkaproducer;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 29-Feb-2024 4:29:50 pm
+*
+**/
+public class KafkaProducerController {
+
+}

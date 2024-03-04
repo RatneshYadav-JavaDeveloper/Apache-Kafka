@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.kafkaconsumer.serviceimpl;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 01-Mar-2024 1:24:42 pm
+*
+**/
+public class ConsumeMessageServiceImpl {
+
+}

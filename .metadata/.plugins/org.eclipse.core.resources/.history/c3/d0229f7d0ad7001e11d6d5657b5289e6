@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package com.kafkaproducer.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kafkaproducer.service.MessageDrivenService;
+import com.launchdarkly.eventsource.MessageEvent;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 29-Feb-2024 4:29:50 pm
+*
+**/
+@RestController
+@RequestMapping("/v1")
+public class KafkaProducerController {
+
+	@Autowired MessageDrivenService messageDrivenService;
+	
+	/**
+	 * @implNote: controller to produce the message.
+	 * @param: message
+	 * {@link: http://localhost:8081/v1/produce?message=firstMessage}
+	 * **/
+	@GetMapping("/produce")
+	public ResponseEntity<String> produceMessageController(@RequestParam("message") String message){
+		MessageEvent messageEvent = messageDrivenService.onMessage(message, null)
+		return ResponseEntity.ok(message);
+	}
+}

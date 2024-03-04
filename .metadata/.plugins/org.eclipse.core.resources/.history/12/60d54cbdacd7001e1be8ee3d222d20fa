@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.kafkaconsumer.controller;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 01-Mar-2024 1:18:04 pm
+*
+**/
+public class MessageConsumerController {
+
+}

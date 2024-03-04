@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.kafkaconsumer.controller;
+
+import org.springframework.kafka.annotation.KafkaListener;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 01-Mar-2024 1:18:04 pm
+*
+**/
+public class MessageConsumerController {
+
+	@KafkaListener(topics = "even-topic")
+	public void consumeMessage() {
+		
+	}
+}

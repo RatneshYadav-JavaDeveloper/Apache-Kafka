@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.kafkaproducer.config;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 29-Feb-2024 3:26:51 pm
+*
+**/
+public class TopicConfig {
+
+}

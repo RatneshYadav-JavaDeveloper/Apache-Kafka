@@ -1,0 +1,10 @@
+1709098134713	Delete element
+1709098366943	Delete element
+1709098382730	Delete element
+1709098911005	Delete element
+1709098942297	Delete element
+1709101201753	Rename type 'MessageConsumerService'
+1709101221882	Rename type 'MessageProducerService'
+1709101238323	Rename type 'MessageConsumerServiceImpl'
+1709101251228	Rename type 'MessageProducerServiceImpl'
+1709102059036	Rename type 'KafkaJsonMessageProducer'

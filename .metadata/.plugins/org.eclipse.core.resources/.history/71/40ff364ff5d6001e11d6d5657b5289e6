@@ -1,0 +1,4 @@
+
+#KAFKA-CONFIGURATIONS
+spring.kafka.consumer.bootstrap-servers=localhost:9092
+

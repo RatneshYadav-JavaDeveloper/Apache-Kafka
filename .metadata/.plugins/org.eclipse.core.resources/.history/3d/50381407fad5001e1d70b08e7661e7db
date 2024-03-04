@@ -1,0 +1,22 @@
+package com.apachekafka.producer.serviceimpl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Service;
+
+import com.apachekafka.producer.service.MessageConsumerService;
+
+@Service
+public class MessageConsumerServiceImpl implements MessageConsumerService {
+
+	public static final Logger LOGGER = LoggerFactory.getLogger(MessageConsumerServiceImpl.class);
+	
+	@KafkaListener(topics = "newTopic")
+	@Override
+	public void consumeMessage(String message) {
+		// TODO Auto-generated method stub
+		LOGGER.info("Message Received %s "+message);
+	}
+
+}

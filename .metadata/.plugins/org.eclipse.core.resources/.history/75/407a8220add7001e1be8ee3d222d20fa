@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.kafkaconsumer.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.kafka.annotation.KafkaListener;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 01-Mar-2024 1:18:04 pm
+*
+**/
+public class MessageConsumerController {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(MessageConsumerController.class);
+	
+	@KafkaListener(topics = "even-topic")
+	public void consumeMessage(String message) {
+		LOGGER.info(String.format("Message Received :", message));
+	}
+}

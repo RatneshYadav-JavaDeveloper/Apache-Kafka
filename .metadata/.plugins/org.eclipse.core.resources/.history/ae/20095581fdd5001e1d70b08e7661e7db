@@ -1,0 +1,8 @@
+#CONSUMER-CONFIGURATIONS
+spring.kafka.consumer.bootstrap-servers=localhost:9092
+spring.kafka.consumer.group-id=myGroup
+
+
+#PRODUCER CONFIGURATIONS
+spring.kafka.producer.bootstrap-servers=localhost:9092
+

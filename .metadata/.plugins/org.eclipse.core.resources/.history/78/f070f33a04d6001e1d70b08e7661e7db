@@ -1,0 +1,61 @@
+/**
+ * 
+ */
+package com.apachekafka.model;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 28-Feb-2024 10:18:34 am
+*
+**/
+public class User {
+
+	private int id;
+	private String userName;
+	private String lastName;
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+	/**
+	 * @return the userName
+	 */
+	public String getUserName() {
+		return userName;
+	}
+	/**
+	 * @param userName the userName to set
+	 */
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", userName=" + userName + ", lastName=" + lastName + "]";
+	}
+	
+	
+	
+}

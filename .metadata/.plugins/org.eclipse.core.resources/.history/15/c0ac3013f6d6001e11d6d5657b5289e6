@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.kafkaproducer.service;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 29-Feb-2024 3:31:18 pm
+*
+**/
+public class MessageDrivenService {
+
+}

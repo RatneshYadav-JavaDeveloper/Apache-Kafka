@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package com.kafkaconsumer.service;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 01-Mar-2024 1:16:32 pm
+*
+**/
+@Serv
+public class ConsumeMessage {
+
+	
+}

@@ -1,0 +1,6 @@
+package com.apachekafka.producer.service;
+
+public interface MessageConsumerService {
+
+	void consumeMessage(String message);
+}

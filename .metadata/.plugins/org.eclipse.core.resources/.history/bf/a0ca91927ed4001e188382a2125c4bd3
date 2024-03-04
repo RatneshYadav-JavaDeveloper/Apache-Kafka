@@ -1,0 +1,16 @@
+package com.apachekafka.producer.service;
+
+public interface MessageProducerService {
+
+	/**
+	 * @implNote : method to send the locationName to the send message method.
+	 * 
+	 * **/
+	String locationNameGenerator();
+	
+	/**
+	 * @implNote : method to send the message to the topic subscribed consumer.
+	 * @param message
+	 * **/
+	void sendMessage(String message);
+}

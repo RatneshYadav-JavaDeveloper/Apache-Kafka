@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.kafkaconsumer.serviceimpl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.kafka.annotation.KafkaListener;
+
+import com.kafkaconsumer.service.ConsumeMesageService;
+
+/**
+*
+* @author Ratnesh
+* @DateTime 01-Mar-2024 1:24:42 pm
+*
+**/
+public class ConsumeMessageServiceImpl implements ConsumeMesageService {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(ConsumeMessageServiceImpl.class);
+	
+	@KafkaListener(topics = "even-topic")
+	@Override
+	public void consumeMessage(String message) {
+		LOGGER.info(String.format("Message Received :", message));
+	}
+}
